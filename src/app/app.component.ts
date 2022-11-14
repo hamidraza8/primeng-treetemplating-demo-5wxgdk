@@ -35,7 +35,7 @@ export class AppComponent {
     }
   }
   bindGrid() {
-    this.setGridSize(30, 30);
+    this.setGridSize(50, 50);
     this.grid = [[]];
     for (var y = 0; y < this.grid_rows_n; y++) {
       this.grid.push([]);
