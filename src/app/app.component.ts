@@ -18,5 +18,12 @@ export class AppComponent {
 
   ngOnInit() {}
 
-  bindGrid() {}
+  bindGrid() {
+    for (var y = 0; y < this.grid_cols_n; y++) {
+      this.grid.push([]);
+      for (var x = 0; x < this.grid_rows_n; x++) {
+        this.bindGrid[y].push([y, x]);
+      }
+    }
+  }
 }
