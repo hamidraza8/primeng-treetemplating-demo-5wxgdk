@@ -20,10 +20,12 @@ export class AppComponent {
 
   ngOnInit() {}
   setMouseDown(mouseDown, id) {
-    this.fillBlock(id);
     this.isMouseDown = mouseDown;
+    this.fillBlock(id);
   }
   fillBlock(id) {
+    console.log(id);
+
     if (this.isMouseDown) {
       var element = document.getElementById(id);
       if (element != undefined) {
@@ -38,7 +40,7 @@ export class AppComponent {
     for (var y = 0; y < this.grid_rows_n; y++) {
       this.grid.push([]);
       for (var x = 0; x < this.grid_cols_n; x++) {
-        this.grid[y].push([y, x]);
+        this.grid[y].push(y.toString() + '-' + x.toString());
       }
     }
   }
