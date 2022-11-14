@@ -1,6 +1,18 @@
-<table>
-    <tr>
-    <td>
-    
+<!-- https://dev.to/orahul1/angular-mouse-events-41l9 -->
+isMouseDown: {{ isMouseDown }}
+<table cellspacing="0" cellpadding="0" style="border:none;">
+  <tr *ngFor="let y of grid">
+    <td *ngFor="let x of y">
+      {{ x }}
     </td>
-    </tr>
+  </tr>
+</table>
+<!-- <div
+  id="{{ i }}"
+  style=" position:relative; float:left; height: 10vw;width: 10vw; overflow:hidden; background:#cedebe; border:1px solid black;"
+  (mouseover)="fillBlock(i)"
+  (mousedown)="setMouseDown(true, i)"
+  (mouseup)="setMouseDown(false, i)"
+>
+  {{ i }}
+</div> -->
